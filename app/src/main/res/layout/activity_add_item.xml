@@ -1,31 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="16dp"
-    android:orientation="vertical"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="24dp">
 
-    <EditText
-        android:id="@+id/etName"
-        android:hint="Item Name"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/etDesc"
-        android:hint="Description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
 
-    <EditText
-        android:id="@+id/etType"
-        android:hint="Lost or Found"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/radioLost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lost" />
 
-    <Button
-        android:id="@+id/btnSubmit"
-        android:text="Submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+            <RadioButton
+                android:id="@+id/radioFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/found" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/hint_name"
+            android:inputType="textPersonName"
+            android:importantForAutofill="yes"
+            android:textColorHint="#808080"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/hint_phone"
+            android:inputType="phone"
+            android:importantForAutofill="yes"
+            android:textColorHint="#808080"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etDesc"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/hint_description"
+            android:inputType="textMultiLine"
+            android:importantForAutofill="yes"
+            android:textColorHint="#808080"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/hint_date"
+            android:inputType="date"
+            android:importantForAutofill="yes"
+            android:textColorHint="#808080"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/hint_location"
+            android:inputType="text"
+            android:importantForAutofill="yes"
+            android:textColorHint="#808080"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
+    </LinearLayout>
+</ScrollView>
